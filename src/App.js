@@ -131,8 +131,7 @@ class App extends Component {
       <React.Fragment>
         <Router>
           <Header searchMovie={this.searchMovie}></Header>
-          <Switch>
-            <Route path="/" exact>
+          <Route path="/" exact>
               {(this.state.movies.length>0)?
               <>
               <Movies
@@ -153,9 +152,8 @@ class App extends Component {
               :
               <h1 style={{color:"white",textAlign:"center"}}>No Movie found</h1>
               }
-             
-              
             </Route>
+          <Switch>
             <Route path="/movieInfo" exact component={MovieInfo}>
             </Route>
             <Route path="/favourite" exact>
