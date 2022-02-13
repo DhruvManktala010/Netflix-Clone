@@ -51,6 +51,7 @@ class App extends Component {
       }
       this.setState({
         movies: data.results.slice(0, 10),
+        movieType:movieName,
         totalPages: pages
       });
 
